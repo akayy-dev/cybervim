@@ -3,6 +3,8 @@ require('plugins/packer')     -- Plugins List
 require('plugins/nvim-tree')  -- File Tree
 require('plugins/lualine')    -- Lualine
 require('plugins/nvim-cmp')   -- CMP
+require('plugins/lspkind')    -- LSP Icons
+require('plugins/babar')      -- Babar Tabline
 
 -- Keymaps
 require('keymaps/general')
