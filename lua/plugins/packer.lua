@@ -15,13 +15,24 @@ require('packer').startup(function()
 	use 'norcalli/nvim-colorizer.lua'       -- Colorizer
 	use 'hrsh7th/cmp-path'                  -- File Path Completion
 	use 'saadparwaiz1/cmp_luasnip'          -- Snippet Completion
+	use 'onsails/lspkind-nvim'
 
 	-------------------------
 	-- Tmux Integration
 	-------------------------
 	use 'preservim/vimux'                   -- Sending Commands
 	use 'christoomey/vim-tmux-navigator'    -- Navigate Windows
-	use 'Mofiqul/vscode.nvim'               -- VSCode Theme
+
+	-------------------------
+	-- Ricing
+	-------------------------
+	use 'Mofiqul/vscode.nvim'               -- VSCode-Like Theme
+	use 'rafamadriz/neon'
+	use 'olimorris/onedarkpro.nvim'
+	use {                                   -- Tabline
+		'romgrk/barbar.nvim',
+		requires = {'kyazdani42/nvim-web-devicons'}
+	}
 
 	-------------------------
 	-- Treesitter
