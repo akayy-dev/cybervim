@@ -181,6 +181,11 @@ _G.packer_plugins = {
     path = "/home/ahaduk/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["tmux.nvim"] = {
+    loaded = true,
+    path = "/home/ahaduk/.local/share/nvim/site/pack/packer/start/tmux.nvim",
+    url = "https://github.com/aserowy/tmux.nvim"
+  },
   ["trouble.nvim"] = {
     loaded = true,
     path = "/home/ahaduk/.local/share/nvim/site/pack/packer/start/trouble.nvim",
@@ -190,16 +195,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ahaduk/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["vim-tmux-navigator"] = {
-    loaded = true,
-    path = "/home/ahaduk/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
-    url = "https://github.com/christoomey/vim-tmux-navigator"
-  },
-  vimux = {
-    loaded = true,
-    path = "/home/ahaduk/.local/share/nvim/site/pack/packer/start/vimux",
-    url = "https://github.com/preservim/vimux"
   },
   ["vscode.nvim"] = {
     loaded = true,

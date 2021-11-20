@@ -5,6 +5,7 @@ require('plugins/lualine')    -- Lualine
 require('plugins/nvim-cmp')   -- CMP
 require('plugins/lspkind')    -- LSP Icons
 require('plugins/babar')      -- Babar Tabline
+require('plugins/tmux')       -- Tmux
 
 -- Keymaps
 require('keymaps/general')

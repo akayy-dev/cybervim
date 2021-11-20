@@ -23,8 +23,7 @@ require('packer').startup(function()
 	-------------------------
 	-- Tmux Integration
 	-------------------------
-	use 'preservim/vimux'                   -- Sending Commands
-	use 'christoomey/vim-tmux-navigator'    -- Navigate Windows
+	use 'aserowy/tmux.nvim'
 
 	-------------------------
 	-- Ricing
