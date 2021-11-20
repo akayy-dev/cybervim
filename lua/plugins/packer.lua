@@ -7,6 +7,9 @@ require('packer').startup(function()
 	use 'hrsh7th/cmp-nvim-lsp'              -- LSP Completion Framework
 	use 'glepnir/lspsaga.nvim'              -- LSP Frontend
 	use 'L3MON4D3/LuaSnip'                  -- Snippets
+	use {
+	"folke/trouble.nvim",                   -- Diagnostics
+	requires = "kyazdani42/nvim-web-devicons"}
 
 	-------------------------
 	-- Completion
