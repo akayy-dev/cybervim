@@ -19,6 +19,7 @@ require('packer').startup(function()
 	use 'hrsh7th/cmp-path'                  -- File Path Completion
 	use 'saadparwaiz1/cmp_luasnip'          -- Snippet Completion
 	use 'onsails/lspkind-nvim'
+	use 'windwp/nvim-ts-autotag'            -- Auto close html tags
 
 	-------------------------
 	-- Tmux Integration
@@ -30,7 +31,6 @@ require('packer').startup(function()
 	-------------------------
 	use 'rafamadriz/neon'                   -- Doom-One like theme
 	use 'Mofiqul/vscode.nvim'               -- VSCode-Like Theme
-	use 'rafamadriz/neon'
 	use 'olimorris/onedarkpro.nvim'
 	use {                                   -- Tabline
 		'romgrk/barbar.nvim',
@@ -79,13 +79,18 @@ require('packer').startup(function()
 	-------------------------
 	-- Project Management
 	-------------------------
-        use {
+	use {
 		"ahmedkhalf/project.nvim",
-          	config = function()
+			config = function()
 		require("project_nvim").setup {
 			update_cwd = true,
 			update_focused_file = {
 			enable = true,
 			update_cwd = true }}
-          end}
+	  end}
+	-------------------------
+	-- Miscellaneous
+	-------------------------
+	use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+
 end)
