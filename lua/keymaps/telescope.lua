@@ -3,8 +3,11 @@ local keymap = vim.api.nvim_set_keymap
 local opts = {noremap = true}
 
 -- Telescope
-keymap('n', '<space>ff', ':Telescope find_files<CR>', opts)
-keymap('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
-keymap('n', '<leader>fb', ':Telescope buffers<CR>', opts)
-keymap('n', '<leader>fh', ':Telescope help_tags<CR>', opts)
-keymap('n', '<leader>f;', ':Telescope<CR>', opts)
+keymap('n', '<leader>ff', '<cmd>Telescope find_files theme=dropdown<CR>', opts)
+keymap('n', '<leader>fg', '<cmd>Telescope live_grep theme=dropdown<CR>', opts)
+keymap('n', '<leader>fh', '<cmd>Telescope help_tags theme=dropdown<CR>', opts)
+keymap('n', '<leader>f;', '<cmd>Telescope<CR>', opts)
+
+-- Buffers
+keymap('n', '<leader>bs', '<cmd>Telescope buffers theme=dropdown<CR>', opts)
+keymap('n', '<leader>bk', '<cmd>bdel<CR>', opts)

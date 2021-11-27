@@ -6,6 +6,7 @@ local opts = {noremap = true, silent = true}
 
 keymap('n', 'gr', '<cmd>TroubleToggle lsp_references<cr>', opts)                  -- Find References
 keymap('n', 'gb', '<cmd>TroubleToggle<cr>', opts)                                 -- Toggle Bug Window
+keymap('n', 'gp', '<cmd>Telescope lsp_workspace_diagnostics theme=dropdown<cr>', opts)           -- Preview Definition
 keymap('n', '<F2>', '<cmd>Lspsaga rename<cr>', opts)                              -- Rename
 keymap('n', 'gR', '<cmd>Lspsaga rename<cr>', opts)                                -- Rename for terminal without access to the F2 key
 keymap('n', 'gd', '<cmd>TroubleToggle lsp_definitions<cr>', opts)                 -- Find Definition
