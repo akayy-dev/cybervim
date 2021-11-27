@@ -16,6 +16,7 @@ require('keymaps/git')
 
 -- Code
 vim.cmd("autocmd BufNewFile,BufRead *.py lua require('code/python')")
+vim.cmd("autocmd BufNewFile,BufRead *.html lua require('code/html')")
 require('code/general')
 require('plugins/lsprocks')
 require('plugins/treesitter')
