@@ -28,6 +28,7 @@ require('packer').startup(function()
 	-------------------------
 	-- Ricing
 	-------------------------
+	use 'rafamadriz/neon'                   -- Doom-One like theme
 	use 'Mofiqul/vscode.nvim'               -- VSCode-Like Theme
 	use 'rafamadriz/neon'
 	use 'olimorris/onedarkpro.nvim'
