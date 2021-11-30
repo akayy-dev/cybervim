@@ -11,7 +11,7 @@ keymap('n', 'gR', '<cmd>Lspsaga rename<cr>', opts)                              
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)                                 -- Find Definition
 keymap('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)                                      -- Hover documentation
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+keymap('n', '<C-i>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 keymap('n', '<leader>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
 keymap('n', '<leader>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
 keymap('n', '<leader>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
