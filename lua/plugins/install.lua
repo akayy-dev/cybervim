@@ -31,6 +31,7 @@ require('packer').startup(function()
 	-------------------------
 	use 'rafamadriz/neon'                   -- Doom-One like theme
 	use 'Mofiqul/vscode.nvim'               -- VSCode-Like Theme
+	use 'LunarVim/onedarker.nvim'
 	use 'olimorris/onedarkpro.nvim'
 	use {                                   -- Tabline
 		'romgrk/barbar.nvim',
