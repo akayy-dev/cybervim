@@ -38,12 +38,7 @@ local gitmaps = {
 
 wk.register(gitmaps, spaceopts)
 
-wk.setup {
-	plugins = {
-		spelling = true,
-		suggestions = 20
-	},
-}
+wk.setup {}
 
 -- LSP
 local lspmaps = {
