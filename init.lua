@@ -1,23 +1,18 @@
--- Plugin
-require('plugins/install')    -- Plugins List
-require('plugins/nvim-tree')  -- File Tree
-require('plugins/lualine')    -- Lualine
-require('plugins/nvim-cmp')   -- CMP
-require('plugins/babar')      -- Babar Tabline
-require('plugins/tmux')       -- Tmux
+﻿require("options")
+require('lspconf')
+require("whichkey")
+require('plugins')            -- Plugins List
+require('nvimtree')           -- File Tree
+require('lualineconfig')      -- Lualine
+require('cmpconfig')          -- CMP
+require('barbarconfig')       -- Babar Tabline
+require('tmuxconfig')         -- Tmux
 
 -- Keymaps
-require('keymaps/general')
-require('keymaps/telescope')
-require('keymaps/buffersnwindows')
-require('keymaps/nvim-tree')
-require('keymaps/git')
+require('keymaps')
 
 -- Code
-require('code/general')
-require('keymaps/lsp')
-require('code/lsp')
-require('plugins/treesitter')
+require('treesitterconfig')
 
 -- Appearance
 require("appearance")

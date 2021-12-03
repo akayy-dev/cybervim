@@ -1,6 +1,3 @@
-vim.cmd('set nohlsearch')
-vim.cmd('set splitbelow')
-
 ------------------
 --  Colorizer   --
 ------------------
@@ -16,4 +13,4 @@ hi Pmenu ctermbg=NONE ctermfg=NONE
 hi PmenuSel ctermbg=NONE ctermfg=NONE
 ]]
 
-vim.cmd('colorscheme onedarker')
+vim.g.colors_name = "onedarker"

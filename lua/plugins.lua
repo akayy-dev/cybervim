@@ -50,7 +50,7 @@ require('packer').startup(function()
 	-- File Tree
 	-------------------------
 	use {'kyazdani42/nvim-tree.lua',                  -- File Tree
-	requires = 'kyazdani42/nvim-web-devicons'}        -- Icons
+		requires = 'kyazdani42/nvim-web-devicons'}        -- Icons
 
 	-------------------------
 	-- Working with Git
@@ -93,5 +93,6 @@ require('packer').startup(function()
 	-- Miscellaneous
 	-------------------------
 	use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+	use { 'folke/which-key.nvim' }
 
 end)
