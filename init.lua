@@ -1,18 +1,13 @@
-﻿require("options")
+﻿require('plugins')
+require("options")
 require('lspconf')
+require('completion')
 require("whichkey")
-require('plugins')            -- Plugins List
-require('nvimtree')           -- File Tree
-require('lualineconfig')      -- Lualine
-require('cmpconfig')          -- CMP
-require('barbarconfig')       -- Babar Tabline
-require('tmuxconfig')         -- Tmux
-
--- Keymaps
+require('nvimtree')
+require('lualineconfig')
+require('cmpconfig')
+require('barbarconfig')
+require('tmuxconfig')
 require('keymaps')
-
--- Code
 require('treesitterconfig')
-
--- Appearance
 require("appearance")
