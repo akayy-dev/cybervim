@@ -46,7 +46,7 @@ local lspmaps = {
 		r = {"<cmd>Telescope lsp_references theme=dropdown<CR>", "references"},
 		p = {"<cmd>Telescope lsp_workspace_diagnostics theme=dropdown<CR>", "problems"},
 		d = {"<cmd>lua vim.lsp.buf.definition()<CR>", "definition"},
-		t = {"<cmd>TodoTelescope theme=dropdown<CR>", "TODOs"},
+		e = {"<cmd>TodoTelescope theme=dropdown<CR>", "TODOs"},
 	}
 }
 
