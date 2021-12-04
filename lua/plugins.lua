@@ -1,5 +1,6 @@
 require('packer').startup(function()
 	use 'wbthomason/packer.nvim'            -- Packer (likes uninstalling itself)
+	-- Code
 	-------------------------
 	-- LSP
 	-------------------------
@@ -10,7 +11,6 @@ require('packer').startup(function()
 	use {
 	"folke/trouble.nvim",                   -- Diagnostics
 	requires = "kyazdani42/nvim-web-devicons"}
-
 	-------------------------
 	-- Completion
 	-------------------------
@@ -20,12 +20,18 @@ require('packer').startup(function()
 	use 'saadparwaiz1/cmp_luasnip'          -- Snippet Completion
 	use 'onsails/lspkind-nvim'
 	use 'windwp/nvim-ts-autotag'            -- Auto close html tags
-
+	-------------------------
+	-- Todo
+	-------------------------
+	use {'folke/todo-comments.nvim',
+		config = function()
+			require("todo-comments").setup{}
+		end
+	}
 	-------------------------
 	-- Tmux Integration
 	-------------------------
 	use 'aserowy/tmux.nvim'
-
 	-------------------------
 	-- Ricing
 	-------------------------
@@ -37,21 +43,17 @@ require('packer').startup(function()
 		'romgrk/barbar.nvim',
 		requires = {'kyazdani42/nvim-web-devicons'}
 	}
-
 	-------------------------
 	-- Treesitter
 	-------------------------
 	use { 'nvim-treesitter/nvim-treesitter',
 		run = ':TSUpdate' }                           -- Treesitter
 	use 'p00f/nvim-ts-rainbow'                        -- Rainbow Parentheses
-
-
 	-------------------------
 	-- File Tree
 	-------------------------
 	use {'kyazdani42/nvim-tree.lua',                  -- File Tree
 		requires = 'kyazdani42/nvim-web-devicons'}        -- Icons
-
 	-------------------------
 	-- Working with Git
 	-------------------------
@@ -62,21 +64,18 @@ require('packer').startup(function()
 		require('gitsigns').setup()
 		end
 		}
-
 	-------------------------
 	-- Status Bar
 	-------------------------
 	use {
 		'nvim-lualine/lualine.nvim',                              -- Status Bar
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}}  -- Icons
-
 	-------------------------
 	-- Telecsope (Fuzzy Find)
 	-------------------------
 	use {
 		'nvim-telescope/telescope.nvim',         -- Telescope
 		requires = { {'nvim-lua/plenary.nvim'}}} -- Telescope Dependecy 
-
 	-------------------------
 	-- Project Management
 	-------------------------
@@ -94,5 +93,4 @@ require('packer').startup(function()
 	-------------------------
 	use { 'michaelb/sniprun', run = 'bash ./install.sh'}
 	use { 'folke/which-key.nvim' }
-
 end)
