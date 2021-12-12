@@ -10,7 +10,7 @@ lualine.setup {
 	sections = {
 		lualine_a = {''},
 		lualine_b = {'branch', 'diff',
-			{'diagnostics', sources={'nvim_lsp', 'coc'}}},
+			{'diagnostics', sources={'nvim_diagnostic', 'coc'}}},
 		lualine_c = {''},
 		lualine_x = {'encoding'},
 		lualine_y = {'progress', 'location'},
