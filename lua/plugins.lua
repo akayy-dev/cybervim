@@ -3,6 +3,7 @@ require('packer').startup(function()
 
 	use 'kyazdani42/nvim-web-devicons'      -- Icons
 	use 'neovim/nvim-lspconfig'             -- LSP
+	use 'tamago324/nlsp-settings.nvim'      -- Configure lsp with .json files
 	use 'williamboman/nvim-lsp-installer'   -- LSP Server Installer
 	use 'hrsh7th/cmp-nvim-lsp'              -- LSP Completion Framework
 	use 'glepnir/lspsaga.nvim'              -- LSP Frontend
@@ -15,6 +16,7 @@ require('packer').startup(function()
 	use 'windwp/nvim-ts-autotag'            -- Auto close html tags
 	use 'folke/todo-comments.nvim'          -- Highlight and Search TODO comments
 	use 'aserowy/tmux.nvim'                 -- Tmux Integration
+	use 'windwp/nvim-autopairs'             -- Auto pairs
 	use 'rafamadriz/neon'
 	use 'Mofiqul/vscode.nvim'
 	use 'LunarVim/onedarker.nvim'
