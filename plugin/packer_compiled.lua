@@ -119,6 +119,16 @@ _G.packer_plugins = {
     path = "/Users/ahadukebede/.local/share/nvim/site/pack/packer/start/neon",
     url = "https://github.com/rafamadriz/neon"
   },
+  ["nlsp-settings.nvim"] = {
+    loaded = true,
+    path = "/Users/ahadukebede/.local/share/nvim/site/pack/packer/start/nlsp-settings.nvim",
+    url = "https://github.com/tamago324/nlsp-settings.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/ahadukebede/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/ahadukebede/.local/share/nvim/site/pack/packer/start/nvim-cmp",

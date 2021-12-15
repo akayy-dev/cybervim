@@ -17,3 +17,6 @@ lsp_installer.on_server_ready(function(server)
     local opts = {}
     server:setup(opts)
 end)
+
+-- Configure server with JSON
+require'nlspsettings'.setup()
