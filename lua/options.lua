@@ -11,10 +11,12 @@ vim.o.hlsearch = false      -- Disable Highlighting in search.
 vim.o.timeoutlen = 500      -- Waits 500ms for which-key to popup.
 vim.o.wrap = false          -- Disable line wrapping.
 vim.o.termguicolors = true  -- Use full terminal colors.
-vim.opt.autoindent = true   -- Automatically indent
-vim.opt.tabstop = 4         -- Four space tab
-vim.opt.shiftwidth= 4       -- Four space tab
+vim.o.autoindent = true     -- Automatically indent
+vim.o.foldlevelstart = 4    -- Automatically fold code 4 indents in
+vim.o.tabstop = 4           -- Four space tab
+vim.o.shiftwidth= 4         -- Four space tab
 require'colorizer'.setup()  -- Setup colorizer
 
-vim.cmd[[colorscheme onedarker]]
+vim.g.vscode_style = "dark" -- Use dark theme for vscode.nvim
+vim.cmd[[colorscheme vscode]]
 vim.o.guifont = "Hack Nerd Font Mono:h18"
