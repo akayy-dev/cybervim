@@ -3,6 +3,7 @@ require('packer').startup(function()
 
 	use 'kyazdani42/nvim-web-devicons'      -- Icons
 	use 'neovim/nvim-lspconfig'             -- LSP
+	use 'jose-elias-alvarez/null-ls.nvim'   -- Formatting and stuff
 	use 'tamago324/nlsp-settings.nvim'      -- Configure lsp with .json files
 	use 'williamboman/nvim-lsp-installer'   -- LSP Server Installer
 	use 'hrsh7th/cmp-nvim-lsp'              -- LSP Completion Framework

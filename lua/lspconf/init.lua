@@ -8,5 +8,6 @@
 Configure neovim to work with LSP.
 --]]
 require('lspconf/servers')
+require('lspconf/null')
 require('lspconf/saga')
 require('lspconf/kind')
