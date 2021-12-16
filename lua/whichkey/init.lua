@@ -5,5 +5,6 @@ require 'whichkey.telescope'
 require 'whichkey.workspace'
 require 'whichkey.git'
 require 'whichkey.lsp'
+require 'whichkey.buffers'
 
 wk.setup{}
