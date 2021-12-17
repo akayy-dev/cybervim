@@ -17,8 +17,8 @@ local leaderlessopts = {
 
 local gotomaps = {
 	g = {
-		r = {"<cmd>Telescope lsp_references theme=dropdown<CR>", "references"},
-		p = {"<cmd>Telescope lsp_workspace_diagnostics theme=dropdown<CR>", "problems"},
+		r = {"<cmd>lua vim.lsp.buf.references()<CR>", "references"},
+		p = {"<cmd>Telescope diagnostics theme=dropdown<CR>", "problems"},
 		d = {"<cmd>lua vim.lsp.buf.definition()<CR>", "definition"},
 	},
 }

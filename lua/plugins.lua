@@ -18,6 +18,7 @@ require('packer').startup(function()
 	use 'folke/todo-comments.nvim'          -- Highlight and Search TODO comments
 	use 'aserowy/tmux.nvim'                 -- Tmux Integration
 	use 'windwp/nvim-autopairs'             -- Auto pairs
+	use 'kevinhwang91/nvim-bqf'             -- Better quickfix menu
 	use 'rafamadriz/neon'
 	use 'Mofiqul/vscode.nvim'
 	use 'LunarVim/onedarker.nvim'
