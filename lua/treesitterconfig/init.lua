@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-	ensure_installed = 'maintained',
+	ensure_installed = 'all',
 	highlight = { enable = true },  -- Syntax Highlighting
 	indent = { enable = true },     -- Indenting
 	autotag = { enable = true },    -- Auto close HTML tags

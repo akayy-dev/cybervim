@@ -25,11 +25,12 @@ require('packer').startup(function()
 	use 'olimorris/onedarkpro.nvim'
 	use 'romgrk/barbar.nvim'
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+	use { "SmiteshP/nvim-gps", requires = "nvim-treesitter/nvim-treesitter" }
 	use 'p00f/nvim-ts-rainbow'              -- Rainbow Parentheses
 	use 'kyazdani42/nvim-tree.lua'          -- File Tree
 	use 'tpope/vim-fugitive'                -- Git Commands
 	use 'lewis6991/gitsigns.nvim'           -- Git Gutter
-	use 'nvim-lualine/lualine.nvim'         -- Status Bar
+	use 'feline-nvim/feline.nvim'           -- StatusLine
 	use 'nvim-telescope/telescope.nvim'     -- Fuzzy Finder
 	use 'folke/which-key.nvim'              -- Show hotkeys
 	use 'nvim-lua/plenary.nvim'             -- Dependency for some plugins (e.g telescope)
