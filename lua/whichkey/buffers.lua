@@ -12,7 +12,7 @@ local buffermaps = {
 	name = "buffers",
 	b = {
 		k = {"<cmd>bdel!<CR>", "kill current buffer"},
-		s = {"<cmd>Telescope buffers theme=dropdown<CR>", "kill current buffer"}
+		s = {"<cmd>Telescope buffers theme=dropdown<CR>", "search open buffers"}
 	}
 }
 
