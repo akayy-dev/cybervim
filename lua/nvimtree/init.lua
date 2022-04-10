@@ -1,7 +1,6 @@
 vim.g.nvim_tree_add_trailing = 1
 
 require'nvim-tree'.setup {
-  auto_close          = true,
   open_on_tab         = false,
   hijack_cursor       = true,
   update_cwd          = false,
@@ -23,3 +22,6 @@ require'nvim-tree'.setup {
     height = 30
   }
 }
+
+-- Auto close
+vim.cmd[[autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif]]
