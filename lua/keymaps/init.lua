@@ -14,3 +14,8 @@ keymap('n', 'Q', '<cmd>copen<CR>', opts)
 keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
 keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+keymap('n', 'K', "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
+
+-- Buffer Management
+keymap('n', 'L', "<cmd>bnext<CR>", opts)
+keymap('n', 'H', "<cmd>bprevious<CR>", opts)
