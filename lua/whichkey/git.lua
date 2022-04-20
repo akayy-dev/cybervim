@@ -1,5 +1,5 @@
 -- Using shortcuts with git
-wk = require('which-key')
+local wk = require('which-key')
 
 local spaceopts = {
 	mode = 'n',
