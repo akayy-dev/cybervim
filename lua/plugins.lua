@@ -11,7 +11,7 @@ require('packer').startup(function()
 
 	-- Snippets
 	use 'L3MON4D3/LuaSnip' -- Snippet engine
-	use 'rafamadriz/friendly-snippets' --Snippet collection
+	use 'rafamadriz/friendly-snippets' -- Snippet collection
 
 	-- Autcomplete
 	use 'hrsh7th/nvim-cmp' -- Autcomplete engine
@@ -49,5 +49,5 @@ require('packer').startup(function()
 	use 'folke/which-key.nvim' -- Show hotkeys
 	use 'nvim-telescope/telescope.nvim' -- Fuzzy Finder
 	use 'kyazdani42/nvim-web-devicons' -- Icons
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Tree-sitter parser
+	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- tree-sitter parser
 end)

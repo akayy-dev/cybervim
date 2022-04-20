@@ -1,3 +1,4 @@
+vim.o.number = false
 vim.o.relativenumber = true
 
 -- TODO: Convert vim.cmd into a lua buffer keymap when possible

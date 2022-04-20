@@ -14,6 +14,11 @@ local fmt = require("luasnip.extras.fmt").fmt
 local m = require("luasnip.extras").m
 local lambda = require("luasnip.extras").l
 
+ls.config.set_config {
+	history = true,
+	updateevents = 'TextChanged,TextChangedI'
+}
+
 ls.add_snippets(nil, {
 	-- Add custom snippets here.
 })
