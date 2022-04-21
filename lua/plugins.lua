@@ -42,12 +42,14 @@ require('packer').startup(function()
 	use 'feline-nvim/feline.nvim' -- StatusLine
 	use 'kevinhwang91/nvim-bqf' -- Better quickfix menu
 	use 'p00f/nvim-ts-rainbow' -- Rainbow Parentheses
+	use 'kyazdani42/nvim-web-devicons' -- Icons
+	use 'folke/which-key.nvim' -- Show hotkeys
 
+	-- Syntax
+	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- tree-sitter parser
+	use 'numToStr/Comment.nvim' -- Auto comment
 	-- Misc
 	use 'aserowy/tmux.nvim' -- Tmux Integration
 	use 'nvim-lua/plenary.nvim' -- Dependency for some plugins (e.g telescope)
-	use 'folke/which-key.nvim' -- Show hotkeys
 	use 'nvim-telescope/telescope.nvim' -- Fuzzy Finder
-	use 'kyazdani42/nvim-web-devicons' -- Icons
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- tree-sitter parser
 end)
