@@ -1,4 +1,4 @@
-require('packer').startup(function()
+require('packer').startup({ function()
 	use 'wbthomason/packer.nvim' -- Packer (likes uninstalling itself)
 
 	-- LSP
@@ -52,4 +52,13 @@ require('packer').startup(function()
 	use 'aserowy/tmux.nvim' -- Tmux Integration
 	use 'nvim-lua/plenary.nvim' -- Dependency for some plugins (e.g telescope)
 	use 'nvim-telescope/telescope.nvim' -- Fuzzy Finder
-end)
+end,
+config = {
+	display = {
+		open_fn = function()
+			-- Packer uses a floating window
+			return require('packer.util').float({ border = 'single' })
+		end,
+	}
+} }
+)
