@@ -18,6 +18,7 @@ require('packer').startup({ function()
 	use 'hrsh7th/cmp-path' -- File Path Completion
 	use 'saadparwaiz1/cmp_luasnip' -- Snippet Completion
 	use 'hrsh7th/cmp-nvim-lsp' -- LSP Completion Framework
+	use 'hrsh7th/cmp-nvim-lua' -- Lua vim global completion.
 	use 'norcalli/nvim-colorizer.lua' -- Colorizer
 	use 'folke/todo-comments.nvim' -- Highlight and Search TODO comments
 
