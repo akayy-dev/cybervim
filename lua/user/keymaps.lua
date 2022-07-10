@@ -14,6 +14,7 @@ keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 keymap('n', 'K', "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+keymap('n', 'gp', '<cmd>TroubleToggle<CR>', opts)
 
 -- Buffer Management
 keymap('n', 'L', "<cmd>bnext<CR>", opts)

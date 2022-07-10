@@ -8,6 +8,7 @@ require('packer').startup({ function()
 	use 'williamboman/nvim-lsp-installer' -- LSP Server Installer
 	use 'glepnir/lspsaga.nvim' -- LSP Frontend
 	use 'onsails/lspkind-nvim' -- Icons for nvim-cmp
+	use 'folke/trouble.nvim' -- Diagnostics popup
 
 	-- Snippets
 	use 'L3MON4D3/LuaSnip' -- Snippet engine
@@ -49,6 +50,7 @@ require('packer').startup({ function()
 	-- Syntax
 	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- tree-sitter parser
 	use 'numToStr/Comment.nvim' -- Auto comment
+
 	-- Misc
 	use 'aserowy/tmux.nvim' -- Tmux Integration
 	use 'nvim-lua/plenary.nvim' -- Dependency for some plugins (e.g telescope)
