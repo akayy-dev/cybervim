@@ -10,8 +10,6 @@ keymap('n', '<leader>p', '<cmd>NvimTreeToggle<CR>', opts)
 keymap('n', 'Q', '<cmd>copen<CR>', opts)
 
 -- LSP
-keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
 keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
 keymap('n', 'K', "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
