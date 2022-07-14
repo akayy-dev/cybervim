@@ -1,4 +1,4 @@
-vim.g.nvim_tree_add_trailing = 1
+-- vim.g.nvim_tree_add_trailing = 1
 
 require'nvim-tree'.setup {
   open_on_tab         = false,
