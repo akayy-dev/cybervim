@@ -14,7 +14,8 @@ vim.o.termguicolors = true  -- Use full terminal colors.
 vim.o.autoindent = true     -- Automatically indent
 vim.o.foldlevelstart = 4    -- Automatically fold code 4 indents in
 vim.o.tabstop = 4           -- Four space tab
-vim.o.shiftwidth= 4         -- Four space tab
+vim.o.shiftwidth = 4        -- Four space tab
+vim.o.laststatus = 3        -- Global statusline
 require'colorizer'.setup()  -- Setup colorizer
 
 vim.g.vscode_style = "dark" -- Use dark theme for vscode.nvim
