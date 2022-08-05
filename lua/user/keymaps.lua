@@ -19,3 +19,6 @@ keymap('n', 'gp', '<cmd>TroubleToggle<CR>', opts)
 -- Buffer Management
 keymap('n', 'L', "<cmd>bnext<CR>", opts)
 keymap('n', 'H', "<cmd>bprevious<CR>", opts)
+
+-- Search commands
+keymap('n', '<leader><leader>', '<cmd>Telescope commands theme=ivy<CR>', opts)
