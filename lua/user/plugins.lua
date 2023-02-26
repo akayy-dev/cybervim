@@ -5,10 +5,11 @@ require('packer').startup({ function()
 	use 'neovim/nvim-lspconfig' -- LSP
 	use 'jose-elias-alvarez/null-ls.nvim' -- Formatting and stuff
 	use 'tamago324/nlsp-settings.nvim' -- Configure lsp with .json files
-	use 'williamboman/nvim-lsp-installer' -- LSP Server Installer
+	use 'williamboman/mason.nvim' -- LSP Server Installer
 	use 'glepnir/lspsaga.nvim' -- LSP Frontend
 	use 'onsails/lspkind-nvim' -- Icons for nvim-cmp
 	use 'folke/trouble.nvim' -- Diagnostics popup
+	use 'folke/neodev.nvim' -- LSP for neovim config.
 
 	-- Snippets
 	use 'L3MON4D3/LuaSnip' -- Snippet engine
