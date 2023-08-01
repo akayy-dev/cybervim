@@ -7,7 +7,6 @@ require('packer').startup({ function()
 	use 'tamago324/nlsp-settings.nvim' -- Configure lsp with .json files
 	use 'williamboman/mason.nvim' -- LSP Server Installer
 	use 'williamboman/mason-lspconfig.nvim' -- LSP Server configurator
-	use 'glepnir/lspsaga.nvim' -- LSP Frontend
 	use 'onsails/lspkind-nvim' -- Icons for nvim-cmp
 	use 'folke/trouble.nvim' -- Diagnostics popup
 	use 'folke/neodev.nvim' -- LSP for neovim config.
