@@ -19,5 +19,5 @@ vim.o.laststatus = 3        -- Global statusline
 require'colorizer'.setup()  -- Setup colorizer
 
 vim.g.vscode_style = "dark" -- Use dark theme for vscode.nvim
-vim.cmd[[colorscheme vscode]]
+vim.cmd[[colorscheme dracula]]
 vim.o.guifont = "Hack Nerd Font Mono:h18"

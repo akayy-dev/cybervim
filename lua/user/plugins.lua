@@ -34,6 +34,8 @@ require('packer').startup({ function()
 	use 'rafamadriz/neon'
 	use 'LunarVim/onedarker.nvim'
 	use 'olimorris/onedarkpro.nvim'
+	use 'catppuccin/nvim'
+	use 'Mofiqul/dracula.nvim'
 
 	use 'kyazdani42/nvim-tree.lua' -- File Tree
 
@@ -43,7 +45,7 @@ require('packer').startup({ function()
 
 	-- UI enhancements
 	use 'romgrk/barbar.nvim' -- Tabline
-	use 'feline-nvim/feline.nvim' -- StatusLine
+	use 'tamton-aquib/staline.nvim' -- StatusLine
 	use 'kevinhwang91/nvim-bqf' -- Better quickfix menu
 	use 'p00f/nvim-ts-rainbow' -- Rainbow Parentheses
 	use 'kyazdani42/nvim-web-devicons' -- Icons

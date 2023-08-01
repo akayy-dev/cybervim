@@ -1,3 +1,1 @@
-require('feline').setup({
-	presett = "gruvbox"
-})
+require('staline').setup()
