@@ -1,70 +1,53 @@
-require('packer').startup({ function()
-	use 'wbthomason/packer.nvim' -- Packer (likes uninstalling itself)
 
-	-- LSP
-	use 'neovim/nvim-lspconfig' -- LSP
-	use 'jose-elias-alvarez/null-ls.nvim' -- Formatting and stuff
-	use 'tamago324/nlsp-settings.nvim' -- Configure lsp with .json files
-	use 'williamboman/mason.nvim' -- LSP Server Installer
-	use 'williamboman/mason-lspconfig.nvim' -- LSP Server configurator
-	use 'onsails/lspkind-nvim' -- Icons for nvim-cmp
-	use 'folke/trouble.nvim' -- Diagnostics popup
-	use 'folke/neodev.nvim' -- LSP for neovim config.
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-	-- Snippets
-	use 'L3MON4D3/LuaSnip' -- Snippet engine
-	use 'rafamadriz/friendly-snippets' -- Snippet collection
-
-	-- Autcomplete
-	use 'hrsh7th/nvim-cmp' -- Autcomplete engine
-	use 'hrsh7th/cmp-path' -- File Path Completion
-	use 'saadparwaiz1/cmp_luasnip' -- Snippet Completion
-	use 'hrsh7th/cmp-nvim-lsp' -- LSP Completion Framework
-	use 'hrsh7th/cmp-nvim-lua' -- Lua vim global completion.
-	use 'norcalli/nvim-colorizer.lua' -- Colorizer
-	use 'folke/todo-comments.nvim' -- Highlight and Search TODO comments
-
-	-- Pairing
-	use 'windwp/nvim-ts-autotag' -- Auto close html tags
-	use 'windwp/nvim-autopairs' -- Auto pairs
-
-	-- Colorschemes
-	use 'Mofiqul/vscode.nvim'
-	use 'rafamadriz/neon'
-	use 'LunarVim/onedarker.nvim'
-	use 'olimorris/onedarkpro.nvim'
-	use 'catppuccin/nvim'
-	use 'Mofiqul/dracula.nvim'
-
-	use 'kyazdani42/nvim-tree.lua' -- File Tree
-
-	-- Git
-	use 'tpope/vim-fugitive' -- Git Commands
-	use 'lewis6991/gitsigns.nvim' -- Git Gutter
-
-	-- UI enhancements
-	use 'romgrk/barbar.nvim' -- Tabline
-	use 'tamton-aquib/staline.nvim' -- StatusLine
-	use 'kevinhwang91/nvim-bqf' -- Better quickfix menu
-	use 'p00f/nvim-ts-rainbow' -- Rainbow Parentheses
-	use 'kyazdani42/nvim-web-devicons' -- Icons
-	use 'folke/which-key.nvim' -- Show hotkeys
-
-	-- Syntax
-	use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- tree-sitter parser
-	use 'numToStr/Comment.nvim' -- Auto comment
-
-	-- Misc
-	use 'aserowy/tmux.nvim' -- Tmux Integration
-	use 'nvim-lua/plenary.nvim' -- Dependency for some plugins (e.g telescope)
-	use 'nvim-telescope/telescope.nvim' -- Fuzzy Finder
-end,
-config = {
-	display = {
-		open_fn = function()
-			-- Packer uses a floating window
-			return require('packer.util').float({ border = 'single' })
-		end,
+require("lazy").setup({
+	'Mofiqul/dracula.nvim',
+	'neovim/nvim-lspconfig',
+	'jose-elias-alvarez/null-ls.nvim',
+	'williamboman/mason.nvim',
+	'williamboman/mason-lspconfig.nvim',
+	'onsails/lspkind-nvim',
+	'folke/trouble.nvim',
+	'folke/neodev.nvim',
+	'L3MON4D3/LuaSnip',
+	'rafamadriz/friendly-snippets',
+	'hrsh7th/nvim-cmp',
+	'hrsh7th/cmp-path',
+	'saadparwaiz1/cmp_luasnip',
+	'hrsh7th/cmp-nvim-lsp',
+	'tamago324/nlsp-settings.nvim',
+	'hrsh7th/cmp-nvim-lua',
+	'norcalli/nvim-colorizer.lua',
+	'folke/todo-comments.nvim',
+	'windwp/nvim-ts-autotag',
+	'windwp/nvim-autopairs',
+	'Mofiqul/vscode.nvim',
+	'LunarVim/onedarker.nvim',
+	'kyazdani42/nvim-tree.lua',
+	'tpope/vim-fugitive',
+	'lewis6991/gitsigns.nvim',
+	'romgrk/barbar.nvim',
+	'tamton-aquib/staline.nvim',
+	'kevinhwang91/nvim-bqf',
+	'p00f/nvim-ts-rainbow',
+	'kyazdani42/nvim-web-devicons',
+	'folke/which-key.nvim',
+	'nvim-treesitter/nvim-treesitter',
+	'numToStr/Comment.nvim',
+	'aserowy/tmux.nvim',
+	'nvim-lua/plenary.nvim', -- Dependency for some plugins (e.g telescope),
+	'nvim-telescope/telescope.nvim'
 	}
-} }
 )
