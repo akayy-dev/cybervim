@@ -17,6 +17,7 @@ vim.o.tabstop = 4           -- Four space tab
 vim.o.shiftwidth = 4        -- Four space tab
 vim.o.laststatus = 3        -- Global statusline
 
+
 vim.g.vscode_style = "dark" -- Use dark theme for vscode.nvim
-vim.cmd[[colorscheme dracula]]
+-- vim.cmd[[colorscheme dracula]]
 vim.o.guifont = "Hack Nerd Font Mono:h18"
