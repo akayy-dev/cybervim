@@ -24,6 +24,12 @@ require("lazy").setup({
 			'nvim-treesitter/nvim-treesitter',
 			'kyazdani42/nvim-web-devicons',
 		}},
+	{'rcarriga/nvim-notify', lazy=false, -- Pretty Notifications
+		config=function() vim.notify = require('notify') end},
+	{'folke/noice.nvim',
+		event='VeryLazy',
+		opts={},
+		dependencies={"MunifTanjim/nui.nvim", "rcarriga/nvim-notify"}},
 	'jose-elias-alvarez/null-ls.nvim',
 	'williamboman/mason.nvim',
 	'williamboman/mason-lspconfig.nvim',
@@ -57,8 +63,6 @@ require("lazy").setup({
 	'numToStr/Comment.nvim',
 	'aserowy/tmux.nvim',
 	'nvim-lua/plenary.nvim', -- Dependency for some plugins (e.g telescope),
-	{'rcarriga/nvim-notify', lazy=false, -- Pretty Notifications
-	config=function() vim.notify = require('notify') end},
 	'nvim-telescope/telescope.nvim'
 	}
 )
