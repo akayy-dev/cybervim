@@ -24,30 +24,49 @@ require("lazy").setup({
 			'nvim-treesitter/nvim-treesitter',
 			'kyazdani42/nvim-web-devicons',
 		}},
-	{'rcarriga/nvim-notify', lazy=false, -- Pretty Notifications
-		config=function() vim.notify = require('notify') end},
 	{'folke/noice.nvim',
 		event='VeryLazy',
 		opts={},
-		dependencies={"MunifTanjim/nui.nvim", "rcarriga/nvim-notify"}},
+		dependencies={"MunifTanjim/nui.nvim"}},
+	{'nvim-treesitter/nvim-treesitter',
+		opts= {
+			ensure_installed={ 'http', 'json' }
+		}
+	},
+	{'kylechui/nvim-surround',
+		version='*',
+		lazy=false,
+		-- event='VeryLazy',
+		config = function()
+			require('nvim-surround').setup()
+		end
+	},
 	'jose-elias-alvarez/null-ls.nvim',
-	'williamboman/mason.nvim',
-	'williamboman/mason-lspconfig.nvim',
+	{'williamboman/mason.nvim',
+		-- LSP Installer
+		dependencies={'williamboman/mason-lspconfig.nvim',}
+	},
 	'onsails/lspkind-nvim',
 	'folke/trouble.nvim',
 	'folke/neodev.nvim',
 	'L3MON4D3/LuaSnip',
 	'rafamadriz/friendly-snippets',
-	'hrsh7th/nvim-cmp',
-	'hrsh7th/cmp-path',
-	'saadparwaiz1/cmp_luasnip',
-	'hrsh7th/cmp-nvim-lsp',
+	{
+		'hrsh7th/nvim-cmp',
+		lazy=true,
+		event = 'InsertEnter',
+		dependencies = {
+			'hrsh7th/cmp-omni',
+			'hrsh7th/cmp-path',
+			'saadparwaiz1/cmp_luasnip',
+			'hrsh7th/cmp-nvim-lsp',
+			'hrsh7th/cmp-nvim-lua',
+		}
+	},
 	'tamago324/nlsp-settings.nvim',
-	'hrsh7th/cmp-nvim-lua',
 	'norcalli/nvim-colorizer.lua',
 	'folke/todo-comments.nvim',
 	'windwp/nvim-ts-autotag',
-	'windwp/nvim-autopairs',
 	'Mofiqul/vscode.nvim',
 	'LunarVim/onedarker.nvim',
 	'kyazdani42/nvim-tree.lua',
@@ -56,10 +75,9 @@ require("lazy").setup({
 	'romgrk/barbar.nvim',
 	'tamton-aquib/staline.nvim',
 	'kevinhwang91/nvim-bqf',
-	'p00f/nvim-ts-rainbow',
+	'HiPhish/nvim-ts-rainbow2',
 	'kyazdani42/nvim-web-devicons',
 	'folke/which-key.nvim',
-	'nvim-treesitter/nvim-treesitter',
 	'numToStr/Comment.nvim',
 	'aserowy/tmux.nvim',
 	'nvim-lua/plenary.nvim', -- Dependency for some plugins (e.g telescope),

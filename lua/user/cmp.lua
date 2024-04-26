@@ -17,6 +17,10 @@ cmp.setup({
 	},
 	sources = cmp.config.sources({
 		{ name = 'path' },
+		{ name = 'omni',
+			option = {
+				disable_omnifuncs = { 'v:lua.vim.lsp.omnifunc' }
+		}},
 		{ name = 'nvim_lua' },
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },

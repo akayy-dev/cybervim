@@ -1,0 +1,5 @@
+{
+	"Python.plugins.pyflakes.enabled": false,
+	"Python.plugins.pylint.enabled": false,
+	"Python.plugins.pycodestyle.enabled": false
+}

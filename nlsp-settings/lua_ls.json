@@ -1,5 +1,9 @@
 {
   "Lua.runtime.version": "LuaJIT",
   "Lua.diagnostics.enable": true,
-  "Lua.diagnostics.globals": ["vim", "use"]
+  "Lua.diagnostics.globals": ["vim", "use", "hs"],
+	"Lua.workspace.library": [
+		{
+			"/Applications/Hammerspoon.app/Contents/Resources/extensions/hs/": true
+	}]
 }
