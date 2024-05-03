@@ -29,3 +29,6 @@ keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', opts) -- Search for he
 keymap('n', '<leader>?', '<cmd>Telescope keymaps<CR>', opts) -- Search keybindings
 
 keymap('n', '<leader>g', '<cmd>LazyGit<CR>', opts)
+
+-- Toggle Neotree
+keymap('n', '<leader>ft', '<cmd>Neotree toggle<CR>', opts)
