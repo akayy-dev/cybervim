@@ -58,7 +58,12 @@ require("lazy").setup({
 	'folke/todo-comments.nvim',
 	'windwp/nvim-ts-autotag',
 	'kyazdani42/nvim-tree.lua',
-	'lewis6991/gitsigns.nvim',
+	{
+		'lewis6991/gitsigns.nvim',
+		config = function()
+			require('gitsigns').setup()
+		end
+	},
 	'tamton-aquib/staline.nvim',
 	'HiPhish/nvim-ts-rainbow2',
 	'folke/which-key.nvim',
