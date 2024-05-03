@@ -27,3 +27,5 @@ keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts) -- Search Files
 keymap('n', '<leader>fg', '<cmd>Telescope live_grep theme=dropdown<CR>', opts) -- Search project for string
 keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', opts) -- Search for help tags
 keymap('n', '<leader>?', '<cmd>Telescope keymaps<CR>', opts) -- Search keybindings
+
+keymap('n', '<leader>g', '<cmd>LazyGit<CR>', opts)

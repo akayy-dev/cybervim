@@ -55,6 +55,16 @@ require("lazy").setup({
 			'hrsh7th/cmp-nvim-lua',
 		}
 	},
+	{
+		"kdheepak/lazygit.nvim",
+		cmd = {
+			"LazyGit",
+			"LazyGitConfig",
+			"LazyGitCurrentFile",
+			"LazyGitFilter",
+			"LazyGitFilterCurrentFile",
+		}
+	},
 	'norcalli/nvim-colorizer.lua',
 	'folke/todo-comments.nvim',
 	'windwp/nvim-ts-autotag',
