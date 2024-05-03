@@ -22,8 +22,9 @@ require("lazy").setup({
 		event='VeryLazy',
 		opts={},
 		dependencies={"MunifTanjim/nui.nvim"}},
-	{'nvim-treesitter/nvim-treesitter',
-		opts= {
+	{
+		'nvim-treesitter/nvim-treesitter',
+		opts = {
 			ensure_installed={ 'http', 'json' }
 		}
 	},
