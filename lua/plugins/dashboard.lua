@@ -1,5 +1,14 @@
 local config = {
 	theme='hyper',
+	config = {
+		project = {
+			enable = true,
+			label = 'Projects',
+			limit = 8,
+			action = function(path)
+				vim.cmd('Telescope find_files cwd=' .. path)
+		end}
+	}
 }
 
 return {
