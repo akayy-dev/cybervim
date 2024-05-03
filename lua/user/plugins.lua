@@ -66,9 +66,21 @@ require("lazy").setup({
 	},
 	'tamton-aquib/staline.nvim',
 	'HiPhish/nvim-ts-rainbow2',
-	'folke/which-key.nvim',
 	'numToStr/Comment.nvim',
-	'aserowy/tmux.nvim',
+	{
+		'aserowy/tmux.nvim',
+		config = function()
+			require('tmux').setup({
+				navigation = {
+					enable_default_keybindings = true,
+					cycle_navigation = true,
+				},
+				resize = {
+					enable_default_keybindings = true
+				}
+			})
+		end
+	},
 	'nvim-lua/plenary.nvim', -- Dependency for some plugins (e.g telescope),
 	'nvim-telescope/telescope.nvim'
 	}
