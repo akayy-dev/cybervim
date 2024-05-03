@@ -10,13 +10,14 @@ keymap('n', 'Q', '<cmd>copen<CR>', opts)
 
 -- LSP
 keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-keymap('n', 'K', "<cmd>Lspsaga hover_doc<CR>", opts)
+keymap('n', 'K', "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 
 -- Buffer Management
 keymap('n', 'L', "<cmd>bnext<CR>", opts)
 keymap('n', 'H', "<cmd>bprevious<CR>", opts)
+keymap('n', '<leader>bd', '<cmd>bp|bd #<CR>', opts) -- Close window
 
 -- Search commands
 keymap('n', '<leader><leader>', '<cmd>Telescope commands theme=ivy<CR>', opts)
@@ -32,3 +33,5 @@ keymap('n', '<leader>g', '<cmd>LazyGit<CR>', opts)
 
 -- Toggle Neotree
 keymap('n', '<leader>ft', '<cmd>Neotree toggle<CR>', opts)
+
+
