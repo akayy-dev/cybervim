@@ -1,12 +1,21 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		config = {}
+		opts = {}
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
-		config = {
+		opts = {
 			ensure_installed = { "lua_ls" }
+		},
+		config = {
+			function ()
+				require('mason-lspconfig').setup_handlers{
+					function (server_name)
+						require("lspconfig")[server_name].setup {}
+					end
+				}
+			end
 		}
 	},
 	{
@@ -20,6 +29,7 @@ return {
 					}
 				}
 			})
+			lspconfig.pyright.setup({})
 		end
 	},
 }
