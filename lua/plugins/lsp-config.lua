@@ -1,35 +1,50 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		opts = {}
+		opts = {},
+		config = {
+			function()
+				require('mason').setup({
+					ensure_installed = {'lua_ls', 'pyright'}
+				})
+			end
+		}
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
 		opts = {
 			ensure_installed = { "lua_ls" }
 		},
-		config = {
-			function ()
-				require('mason-lspconfig').setup_handlers{
+	},
+	{
+		'VonHeikemen/lsp-zero.nvim',
+		branch = 'v3.x',
+		config = function()
+				local mason_config = require('mason-lspconfig')
+				mason_config.setup()
+				mason_config.setup_handlers{
 					function (server_name)
-						require("lspconfig")[server_name].setup {}
+						require("lspconfig")[server_name].setup{}
+					end,
+					['lua_ls'] = function()
+						local lspconfig = require('lspconfig')
+						lspconfig.lua_ls.setup{
+						settings = {
+							Lua = {
+								diagnostics = {
+									globals = { "vim", "hs" }
+								}
+							}
+						}
+					}
 					end
 				}
-			end
-		}
+		end
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require('lspconfig')
-			lspconfig.lua_ls.setup({
-				settings = {
-					diagnostics = {
-						globals = { 'vim' }
-					}
-				}
-			})
-			lspconfig.pyright.setup({})
 		end
 	},
 }
