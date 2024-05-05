@@ -14,6 +14,9 @@ keymap('n', 'K', "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
 keymap('n', '<leader>f=', '<cmd>lua vim.lsp.buf.format()<CR>', opts)
+keymap('n', '<leader>sj', '<cmd>Telescope lsp_document_symbols theme=dropdown<CR>', opts)
+keymap('n', '<leader>sJ', '<cmd>Telescope lsp_workspace_symbols theme=dropdown<CR>', opts)
+keymap('n', '<leader>sd', '<cmd>lua vim.diagnostic.setqflist()<CR>', opts)
 
 -- Buffer Management
 keymap('n', 'L', "<cmd>bnext<CR>", opts)
@@ -36,5 +39,3 @@ keymap('n', '<leader>g', '<cmd>LazyGit<CR>', opts)
 keymap('n', '<leader>ft', '<cmd>Neotree toggle<CR>', opts)
 
 
-keymap('n', '<leader>sj', '<cmd>Telescope lsp_document_symbols theme=dropdown<CR>', opts)
-keymap('n', '<leader>sJ', '<cmd>Telescope lsp_workspace_symbols theme=dropdown<CR>', opts)

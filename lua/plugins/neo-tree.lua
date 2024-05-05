@@ -11,7 +11,8 @@ return {
 			visible = true,
 			hide_dotfiles = false,
 			hide_gitignored = true
-		}
+		},
+		close_if_last_window = true
 	}
 }
 
