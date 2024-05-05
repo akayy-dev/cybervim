@@ -1,14 +1,16 @@
-config = function()
-	require'nvim-treesitter.configs'.setup {
+local config = function()
+	require 'nvim-treesitter.configs'.setup {
 		ensure_installed = 'all',
-		highlight = { enable = true },  -- Syntax Highlighting
-		indent = { enable = true },     -- Indenting
-		autotag = { enable = true },    -- Auto close HTML tags
-		rainbow = {                     -- Rainbow Parentheses
+		auto_install = 'true',         -- Automatically install parsers.
+		highlight = { enable = true }, -- Syntax Highlighting
+		indent = { enable = true }, -- Indenting
+		autotag = { enable = true }, -- Auto close HTML tags
+		rainbow = {              -- Rainbow Parentheses
 			enable = true,
 			extended_mode = true,
+			query = 'rainbow-parens',
 			max_file_lines = nil,
-			colors = {'#FFFFFF', '#FF79C6', '#008080', '#50FA7B', '#F1FA8C', '#FFB86C', '#FF5555'}
+			colors = { '#F8F8F2', '#BD93F9', '#FF79C6', '#FFB86C', '#50FA7B'}
 		},
 	}
 end
@@ -17,7 +19,10 @@ end
 return {
 	'nvim-treesitter/nvim-treesitter',
 	opts = {
-		ensure_installed={ 'http', 'json' }
+		ensure_installed = { 'http', 'json' }
+	},
+	dependencies = {
+		'HiPhish/rainbow-delimiters.nvim'
 	},
 	config = config
 }
