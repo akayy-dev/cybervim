@@ -10,5 +10,6 @@ return {
 			name = { "env", "venv", ".venv" },
 			path = './'
 		}
-	end
+	end,
+	event = {'BufEnter *.py'}
 }
