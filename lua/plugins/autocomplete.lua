@@ -66,6 +66,14 @@ local config = function()
 			{ name = "cmdline" },
 		}),
 	})
+
+	-- Autocomplete for dadbod
+	cmp.setup.filetype({'sql'}, {
+		sources = {
+			{ name = 'vim-dadbod-completion' },
+			{ name = 'buffer' }
+		}
+	})
 end
 
 return {

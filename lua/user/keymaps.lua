@@ -3,6 +3,7 @@ local funcmap = vim.keymap.set -- Newer keymap function, takes functions
 local opts = { noremap = true, silent = true }
 
 -- File Tree
+keymap('n', '<leader>fe', '<cmd>Oil --float<CR>', opts)
 
 -- Quickfix
 keymap("n", "Q", "<cmd>copen<CR>", opts)
@@ -16,21 +17,26 @@ keymap("n", "<leader>f=", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
 keymap("n", "<leader>sj", "<cmd>Telescope lsp_document_symbols theme=dropdown<CR>", opts)
 keymap("n", "<leader>sJ", "<cmd>Telescope lsp_workspace_symbols theme=dropdown<CR>", opts)
 keymap("n", "<leader>sd", "<cmd>lua vim.diagnostic.setqflist()<CR>", opts)
+funcmap('n', '<leader>sa', function() require('actions-preview').code_actions() end, opts)
+
+-- TODO comments
+keymap('n', '<leader>st', '<cmd>TodoQuickFix<CR>', opts)
 
 -- Buffer Management
 keymap("n", "L", "<cmd>bnext<CR>", opts)
 keymap("n", "H", "<cmd>bprevious<CR>", opts)
 keymap("n", "<leader>bd", "<cmd>bp|bd #<CR>", opts) -- Close window
+funcmap('n', '<C-M>', function() require('maximize').toggle() end, opts)
 
 -- Search commands
 keymap("n", "<leader><leader>", "<cmd>Telescope commands theme=ivy<CR>", opts)
 keymap("v", "<leader><leader>", "<cmd>Telescope commands theme=ivy<CR>", opts)
 
 -- Telescope
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts) -- Search Files
+keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)               -- Search Files
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep theme=dropdown<CR>", opts) -- Search project for string
-keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts) -- Search for help tags
-keymap("n", "<leader>?", "<cmd>Telescope keymaps<CR>", opts) -- Search keybindings
+keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)                -- Search for help tags
+keymap("n", "<leader>?", "<cmd>Telescope keymaps<CR>", opts)                   -- Search keybindings
 
 keymap("n", "<leader>g", "<cmd>LazyGit<CR>", opts)
 
@@ -53,7 +59,7 @@ function QuickAsk(selection)
 		if selection then
 			chat.ask(question, { window = window_opts, selection = require("CopilotChat.select").visual })
 		else
-			chat.ask(question, { window = window_opts, selection = require("CopilotChat.select").selection })
+			chat.ask(question, { window = window_opts, selection = require("CopilotChat.select").buffer })
 		end
 	end
 end
@@ -77,9 +83,7 @@ funcmap("v", "<leader>ce", ExplainSelection, opts)
 local harpoon = require("harpoon")
 
 -- List jumps
-funcmap("n", "<leader>jj", function()
-	harpoon.ui:toggle_quick_menu(harpoon:list())
-end, opts)
+funcmap("n", "<leader>jj", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, opts)
 
 -- Add to jumplist
 funcmap("n", "<leader>ja", function()

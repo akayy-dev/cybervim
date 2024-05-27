@@ -21,6 +21,7 @@ return {
 		branch = "v3.x",
 		config = function()
 			require("lsp-zero").preset({ manage_nvim_cmp = false })
+			vim.g.lsp_zero_ui_float_border = 'rounded'
 			local mason_config = require("mason-lspconfig")
 			mason_config.setup()
 			mason_config.setup_handlers({
