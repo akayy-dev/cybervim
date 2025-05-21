@@ -1,11 +1,12 @@
 return {
-	'stevearc/oil.nvim',
+	"stevearc/oil.nvim",
 	cmd = { "Oil" },
 	opts = {
 		default_file_explorer = true,
 		delete_to_trash = true,
 		float = {
-			padding = 2
-		}
-	}
+			padding = 2,
+		},
+		extra_scp_args = {},
+	},
 }

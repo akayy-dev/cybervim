@@ -1,3 +1,4 @@
+-- Tabline
 return {
 	'romgrk/barbar.nvim',
 	dependencies = {

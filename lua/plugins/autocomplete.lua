@@ -4,12 +4,15 @@ local has_words_before = function()
 end
 
 local config = function()
+	-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+	local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 	local cmp = require("cmp")
 	local luasnip = require("luasnip")
-	local lspkind = require('lspkind')
+	local lspkind = require("lspkind")
 	cmp.setup({
 		formatting = {
-			format = lspkind.cmp_format()
+			format = lspkind.cmp_format(),
 		},
 		snippet = {
 			expand = function(args)
@@ -22,24 +25,22 @@ local config = function()
 		},
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
-			{ name = 'luasnip' },
+			{ name = "luasnip" },
 			{ name = "path" },
 			{ name = "buffer" },
 		}),
 		mapping = cmp.mapping.preset.insert({
-			["<CR>"] = cmp.mapping.confirm({ select = true }),
-			-- Tab & Shift TabCompletion
-			["<Tab>"] = cmp.mapping(function(fallback)
+			["<Tab>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
+			["<CR>"] = cmp.mapping(function(fallback)
 				if cmp.visible() then
 					cmp.select_next_item()
 				elseif luasnip.expand_or_jumpable() then
 					luasnip.expand_or_jump()
-				elseif has_words_before() then
-					cmp.complete()
 				else
 					fallback()
 				end
 			end, { "i", "s" }),
+			-- Tab & Shift TabCompletion
 			["<S-Tab>"] = cmp.mapping(function(fallback)
 				if cmp.visible() then
 					cmp.select_prev_item()
@@ -68,11 +69,11 @@ local config = function()
 	})
 
 	-- Autocomplete for dadbod
-	cmp.setup.filetype({'sql'}, {
+	cmp.setup.filetype({ "sql" }, {
 		sources = {
-			{ name = 'vim-dadbod-completion' },
-			{ name = 'buffer' }
-		}
+			{ name = "vim-dadbod-completion" },
+			{ name = "buffer" },
+		},
 	})
 end
 
@@ -84,7 +85,7 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-cmdline",
 		"saadparwaiz1/cmp_luasnip",
-		'onsails/lspkind.nvim'
+		"onsails/lspkind.nvim",
 	},
 	config = config,
 }
