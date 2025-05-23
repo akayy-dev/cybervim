@@ -44,40 +44,6 @@ keymap("n", "<leader>g", "<cmd>LazyGit<CR>", opts)
 keymap("n", "<leader>ft", "<cmd>Neotree toggle<CR>", opts)
 
 -- Copilot Stuff!
-local chat = require("CopilotChat")
-local window_opts = {
-	layout = "float",
-	title = "Copilot.nvim",
-	width = 0.8,
-	height = 0.8,
-	border = "rounded",
-}
-
-function QuickAsk(selection)
-	local question = vim.fn.input("Ask Copilot: ")
-	if question ~= "" then
-		if selection then
-			chat.ask(question, { window = window_opts, selection = require("CopilotChat.select").visual })
-		else
-			chat.ask(question, { window = window_opts, selection = require("CopilotChat.select").buffer })
-		end
-	end
-end
-
-function ExplainSelection()
-	chat.ask("Explain the selected code.", { window = window_opts, selection = require("CopilotChat.select").visual })
-end
-
-funcmap("n", "<leader>cc", function()
-	chat.toggle({ window = window_opts })
-end, opts)
-funcmap("n", "<leader>ca", function()
-	QuickAsk(false)
-end, opts)
-funcmap("v", "<leader>ca", function()
-	QuickAsk(true)
-end, opts)
-funcmap("v", "<leader>ce", ExplainSelection, opts)
 
 -- Harpoon
 local harpoon = require("harpoon")
